@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Learning TestNG">
+<suite name="LinkedIn_Smoke">
 
 
 	<listeners>
@@ -12,27 +12,24 @@
 
 	</listeners>
 
-	<test name="Bank Manager Login Test">
+
+	<test name="Landing Page Test">
 		<classes>
-			<class name="testcases.BankManagerLoginTest" />
+			<class name="testcases.ValidateLandingPage" />
+		
 
 		</classes>
-	</test> <!-- Test -->
-
-
-	<test name="Add Customer Test">
+	</test> 
+<!-- 
+<parameter name = "username" value = "alimeer.369@yahoo.com"></parameter>
+<parameter name = "password" value = "fsdfdsfdsfsdf"></parameter>
+ -->
+	<test name="Validate Login Test">
 		<classes>
-			<class name="testcases.AddCustomerTest" />
+				<class name="testcases.ValidateLogin" />
 
 		</classes>
-	</test> <!-- Test -->
+	</test>
 
 
-	<test name="Open Account Test">
-		<classes>
-			<class name="testcases.OpenAccountTest" />
-
-		</classes>
-	</test> <!-- Test -->
-
-</suite> <!-- Suite -->
+</suite>

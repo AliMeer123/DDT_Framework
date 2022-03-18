@@ -6,8 +6,6 @@
 	<artifactId>DDT_Framework_Concept</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-
-
 	<dependencies>
 
 		<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
@@ -87,10 +85,24 @@
 			<version>1.6.4</version>
 		</dependency>
 
-
 	</dependencies>
 
+	<build>
+		<plugins>
 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				<configuration>
+					<testFailureIgnore> false </testFailureIgnore>
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/resources/runner/testng.xml</suiteXmlFile>
 
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
 
